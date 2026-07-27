@@ -7,6 +7,7 @@
     <!-- Configurações para ícone na tela inicial (PWA) -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <!-- Cores da barra de status e navegador para combinar com o fundo -->
     <meta name="theme-color" content="#2c163b">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -24,15 +25,19 @@
         }
 
         body {
-           background: linear-gradient(135deg, #2c163b, #592e6e, #894b8b);
+            background: linear-gradient(135deg, #2c163b, #592e6e, #894b8b);
             color: #ffffff;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            min-height: 100dvh; /* Garante tela cheia em celulares */
-            
+            min-height: 100dvh;
+            padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+            margin: 0;
+            text-align: center;
+        }
+        }
             text-align: center;
             margin: 0; /* Garante que não haja margem branca padrão do navegador */
         }
